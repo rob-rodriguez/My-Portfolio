@@ -5,7 +5,7 @@ html, body {
 }
 
 .wrap {
-	width: 100%;
+	width: 90%;
 	margin: 0 auto;
 }
 
@@ -19,7 +19,6 @@ p {
 	margin: 15px 0;
 	font-size: 16px;
 	line-height: 22px; 
-	text-align: justify;
 }
 
 hr {
@@ -59,16 +58,15 @@ button {
 }
 
 .success {
-    background: #2ecc71;
-    border: 1px solid #27ae60;
-    color: #fff;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    display: block;
-    padding: 5%;
-    margin: 50px auto;
-    width: 80%;
+	background: #2ecc71;
+	border: 1px solid #27ae60;
+	color: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	display: block;
+	padding: 20px;
+	margin: 50px 0;
 }
 
 .error p,
@@ -97,7 +95,7 @@ header a:link,
 header a:visited {
 	color: #fff;
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 100;
 	-webkit-transition:border-color 1s ease;
 	-moz-transition:border-color 1s ease;
@@ -115,11 +113,12 @@ header a:active {
 }
 
 header .nav {
-	width: 100%;
+	width: 400px;
 	position: absolute;
 	z-index: 3;
 	top: 18px;
-	left: 3%;
+	left: -190px;
+	margin-left: 50%;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
@@ -136,12 +135,12 @@ header.sticky .nav {
 
 header .nav li {
 	display: inline-block;
-	width: 60px;
+	width: 72px;
 	text-align: left;
 }
 
 header .nav li.spacer {
-	width: 30px;
+	width: 90px;
 }
 
 header.sticky {
@@ -180,14 +179,14 @@ header.sticky #logo {
 
 .intro {
 	width: 100%;
-    height: 570px;
-	background: #cc3f39 url(../images/intro_banner.jpg) no-repeat -660px 0 fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
+	height: 863px;
+	background: #cc3f39 url(../images/intro_banner.jpg) no-repeat right fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
 }
 
 .intro video {
@@ -215,11 +214,10 @@ header.sticky #logo {
 }
 
 .intro .wrap {
-	padding: 140px 0 0 0;
+	padding: 260px 0 0 0;
 	position: absolute;
 	z-index: 3;
-	left: 5%;
-	width: 90%;
+	left: 2%;
 }
 
 .intro h1 {
@@ -234,8 +232,7 @@ header.sticky #logo {
 	font-weight: 100;
 	color: #fff;
 	opacity: 0;
-	text-align: left;
-	line-height: 1.25;
+    line-height: 46px;
 }
 
 .intro a {
@@ -272,8 +269,8 @@ header.sticky #logo {
 
 .skills ul li {
 	display: inline-block;
-	width: 200px;
-	padding: 0 50px;
+	width: 28%;
+	padding: 0 2%;
 	text-align: center;
 	vertical-align: top;
 }
@@ -349,8 +346,8 @@ header.sticky #logo {
 	border: 1px solid #f1f1f1;
 	-webkit-border-radius: 3px;  -moz-border-radius: 3px;  border-radius: 3px;
 	overflow: hidden;
-	margin: 20px 0;
-	width: 90%;
+	margin: 2%;
+	width: 45%;
 	text-align: left;
 	-webkit-box-shadow: 5px 5px 0 0 #f7f7f7; box-shadow: 5px 5px 0 0 #f7f7f7;
 }
@@ -379,17 +376,17 @@ header.sticky #logo {
 .resume {
 	width: 100%;
 	padding: 80px 0;
-	background: #fafafa;
+	background: #fafafaI;
 }
 
 .resume .left {
-	width: 100%;
-	margin: 0 auto;
+	float: left;
+	width: 25%;
 }
 
 .resume .right {
-	width: 90%;
-	margin: 0 auto;
+	float: right;
+	width: 70%;
 }
 
 .resume h1 {
@@ -397,7 +394,7 @@ header.sticky #logo {
 	color: #cc3f39;
 	text-align: center;
 	width: 90%;
-	margin: 0 auto;
+	margin: 0 auto 60px auto;
 	padding: 0 0 15px 0;
 	display: block;
 	font-weight: 100;
@@ -408,25 +405,25 @@ header.sticky #logo {
 	font-size: 28px;
 	color: #cc3f39;
 	font-weight: 300;
-	text-align: center;
-	margin: 10px 0 20px 0;
+	text-align: right;
 }
 
 .resume h3 {
 	font-size: 24px;
 	color: #333;
 	font-weight: 300;
+	float: left;
 	display: block;
 }
 
 .resume p.date {
-	/* float: right; */
+	float: right;
 	display: block;
-	margin: 5px 0;
+	margin: 0;
 }
 
 .resume p.meta {
-	margin: 0;
+	margin: 5px 0;
 	color: #999;
 	text-transform: uppercase;
 }
@@ -438,7 +435,7 @@ header.sticky #logo {
 .contact {
 	width: 100%;
 	padding: 80px 0;
-    background: #63605d url(../images/contact_banner.jpg) -130px 0 no-repeat fixed;
+	background: #63605d url(../images/contact_banner.jpg) center no-repeat fixed;
 	min-height: 700px;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -478,7 +475,6 @@ header.sticky #logo {
 	color: #fff;
 	text-align: center;
 	width: 90%;
-	line-height: 1.5;
 	margin: 0 auto 60px auto;
 	padding: 0 0 15px 0;
 	display: block;
@@ -490,8 +486,8 @@ header.sticky #logo {
 .contact select {
 	margin: 20px auto;
 	display: block;
-	padding: 5%;
-	width: 80%;
+	padding: 2%;
+	width: 60%;
 	height: 30px;
 	-webkit-box-shadow: 0 0 20px 0 #333;
 	box-shadow: 0 0 20px 0 #333;
@@ -514,8 +510,8 @@ header.sticky #logo {
 .contact button {
 	margin: 20px auto;
 	display: block;
-	padding: 10px;
-	width: 80%;
+	padding: 3%;
+	width: 60%;
 	height: 30px;
 	-webkit-box-shadow: 0 0 20px 0 #333;
 	box-shadow: 0 0 20px 0 #333;

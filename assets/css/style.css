@@ -1,5 +1,7 @@
 @import url("reset.css");
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,100,300,500");
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url("animate.min.css");
 @import url("mobile.css") only screen and  (min-width:1px) and (max-width:599px);
-@import url("desktop.css") only screen and  (min-width:600px);
+@import url("tablet.css") only screen and  (min-width:600px) and (max-width:1024px);
+@import url("desktop.css") only screen and (min-width:1025px);

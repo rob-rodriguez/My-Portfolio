@@ -183,7 +183,7 @@ if ($_POST) {
 			<a href="#skills">Learn More <i class="fa fa-angle-down"></i></a>
 		</div>
 		<div class="red"></div>
-		<?php if (!$detect->isMobile()) { ?>
+		<?php if (!$detect->isMobile() || $detect->isTablet()) { ?>
 		<video autoplay loop preload="auto">
 			<source src="assets/video/intro.mp4" type="video/mp4">
 			<img src="assets/images/intro_banner.jpg" />
