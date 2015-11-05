@@ -1,5 +1,7 @@
 $(document).ready(function() {	
 
+	// $.getScript('path/to/file.js');
+
 	// $("#contact").validate({
 	//   rules: {
 	//     name: "required",
@@ -41,7 +43,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$('a').click(function(){
+	$('a').click(function(event){
 		$('html, body').animate({
 			scrollTop: $( $.attr(this, 'href') ).offset().top
 		}, 500);
