@@ -1,7 +1,7 @@
 <?php
 // error_reporting(E_ALL);
 // ini_set('display_errors', 1);
-
+// Just a test
 date_default_timezone_set('America/Los_Angeles');
 
 require_once 'assets/classes/Mobile_Detect.php';
