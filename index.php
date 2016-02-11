@@ -410,7 +410,7 @@ if ($_POST) {
 			<br /><br />
 
 			<h2>or you can call me</h2><br /><br />
-			<p><a href="tel:+19518375362" class="phone">(951) 291 - 1763</a></p>
+			<p><a href="tel:+19512911763" class="phone">(951) 291 - 1763</a></p>
 		</div>
 	</div>
 </body>
