@@ -1,0 +1,22 @@
+@use '../styles/variables-mixins.scss' as var;
+
+.siteWrapper {
+  margin: 15px;
+  width: calc(100% - 30px) !important;
+  height: calc(100vh - 30px) !important;
+  background-color: var.$background;
+  border-radius: 12.5px;
+  position: relative;
+
+  @include var.breakpoint('lg') {
+    margin: 20px;
+    width: calc(100% - 40px) !important;
+    height: calc(100vh - 40px) !important;
+    border-radius: 25px;
+  }
+
+  .mainContent {
+    position: relative;
+    // padding-top: 100px;
+  }
+}

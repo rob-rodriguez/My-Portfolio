@@ -1,0 +1,38 @@
+@use '../styles/variables-mixins.scss' as var;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: fixed;
+  z-index: 100;
+  top: 20px;
+  left: 20px;
+  // width: 100%;
+
+  .siteLogo {
+    width: 50px;
+    aspect-ratio: 1;
+
+    .siteLogoPath {
+      stroke-width: 0;
+      fill: var.$primary;
+    }
+
+  }
+
+}
+
+.title {
+  font-size: 2rem;
+  color: var.$primary
+}
+
+.logo {
+  display: block;
+  width: 100px;
+  height: 100px;
+  @include var.breakpoint('sm') {
+    display: none;
+  }
+}

@@ -1,0 +1,119 @@
+.button {
+  display: inline-block;
+  color: $text;
+  padding: 0.5em 1em .6em 1.25em;
+  border: 1px solid #ccc;
+	font-weight: 600;
+	@include transition(all,250ms);
+	margin: .1rem 0;
+	line-height: 1em;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 30px;
+  &:hover,
+  &:focus,
+  &:active {
+    // background-color:#000;
+    // color:#FFF;
+		@include transition(all,250ms);
+  }
+	svg {
+		vertical-align: bottom;
+		margin-left: .125em;
+	}
+
+	&.primary {
+		background-color: $primary;
+		color: white;
+		border: 1px solid $primary;
+		
+		font-weight: 600;
+		&:hover,
+		&:focus {
+			background-color: $primary;
+			border: 1px solid $primary;
+			outline: 3px solid $secondary;
+		}
+		&.outline {
+			background-color: transparent;
+			color: $primary;
+			border: 1px solid $primary;
+			&:hover,
+			&:focus {
+				// background-color: $primary;
+				color: $primary;
+			}
+		}
+	}
+
+	&.secondary {
+		background-color: $secondary;
+		color: $primary;
+		border: 1px solid $secondary;
+		
+		font-weight: 600;
+		&:hover,
+		&:focus {
+			background-color: $secondary;
+			border: 1px solid $secondary;
+			outline: 3px solid rgb(255 255 255 / 60%);
+		}
+		&.outline {
+			background-color: transparent;
+			color: $secondary;
+			border: 1px solid $secondary;
+			&:hover,
+			&:focus {
+				// background-color: $primary;
+				color: $secondary;
+			}
+		}
+	}
+	&.default {
+		background-color: $text;
+		color: white;
+		border: 1px solid $text;
+		
+		font-weight: 600;
+		&:hover,
+		&:focus {
+			background-color: $text;
+			border: 1px solid $text;
+			outline: 3px solid rgb(255 255 255 / 60%);
+		}
+		&.outline {
+			background-color: transparent;
+			color: $text;
+			border: 1px solid $text;
+			&:hover,
+			&:focus {
+				// background-color: $primary;
+				color: $text;
+			}
+		}
+	}
+	&.white {
+		background-color: white;
+		color: $text;
+		border: 1px solid $text;
+		
+		font-weight: 600;
+		&:hover,
+		&:focus {
+			background-color: white;
+			border: 1px solid $text;
+			outline: 3px solid rgb(255 255 255 / 60%);
+		}
+		&.outline {
+			background-color: transparent;
+			color: white;
+			border: 1px solid white;
+			&:hover,
+			&:focus {
+				// background-color: $primary;
+				color: white;
+			}
+		}
+	}
+
+}

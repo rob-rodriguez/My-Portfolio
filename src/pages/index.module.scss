@@ -1,0 +1,68 @@
+@use '../styles/variables-mixins.scss' as var;
+
+.hero {
+  height: 80vh;
+  min-height: 600px;
+  @include var.vertical-gradient(#3C434B,#1C1D1F);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  clip-path: ellipse(100% 70% at 50% 30%);
+  position: relative;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+
+  .heroTextContainer {
+    width: var.$wrap_width;
+    display: flex;
+
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%,-50%);
+  }
+
+  .headshotThumbnail {
+    margin-right: 30px;
+  }
+
+  .heroTextTitle,
+  .heroTextIntro {
+    margin: 0;
+    line-height: 1em;
+  }
+
+  .heroTextTitle {
+    font-size: var.$text-size-lg;
+  }
+
+  .heroTextIntro {
+    font-size: var.$text-size-6xl;
+    font-weight: 700;
+    @include var.letter-spacing(-20);
+    margin-bottom: 3rem;
+
+    span {
+      color: var.$primary;
+    }
+
+  }
+
+  .downButton {
+    border: 1px solid white;
+    color: white;
+    background: none;
+    text-align: center;
+    width: 2.5em;
+    height: 2.5em;
+    padding: .25rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}
