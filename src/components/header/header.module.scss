@@ -1,0 +1,90 @@
+@use '../../sass/abstracts' as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  z-index: 100;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  border-top-left-radius: 12.5px;
+  border-top-right-radius: 12.5px;
+  // overflow: hidden;
+
+  @include breakpoint('md') {
+    padding: 20px;
+  }
+
+  @include breakpoint('lg') {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+
+  @include transition(all,300ms);
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    z-index: -1;
+    opacity: 0;
+    @include transition(all,300ms);@include vertical-gradient(rgba(0,0,0,.9), rgba(0,0,0,0));
+    border-top-left-radius: 12.5px;
+    border-top-right-radius: 12.5px;
+    // transition-delay: 500ms;
+
+    @include breakpoint('lg') {
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+    }
+
+  }
+
+  &:global(.fixed) {
+    text-shadow: 2px 2px 8px rgba(0,0,0,.7);
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &:global(.fixed.mobile-nav-open) {
+    text-shadow: none;
+    &:after {
+      opacity: 0;
+    }
+  }
+
+  .siteLogo {
+    width: 35px;
+    aspect-ratio: 1;
+
+    @include breakpoint('md') {
+      width: 50px;
+    }
+
+    .siteLogoPath {
+      stroke-width: 0;
+      fill: clr('primary');
+      @include transition(all,200ms);
+      transition-delay: 450ms;
+    }
+
+    &:global(.fill-white) {
+      .siteLogoPath {
+       fill: clr('neutral-light', 100); 
+       @include transition(all,200ms);
+       transition-delay: 250ms;
+      }
+    }
+
+  }
+
+}

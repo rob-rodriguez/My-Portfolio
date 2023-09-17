@@ -1,11 +1,13 @@
+@use '../abstracts' as *;
+
 html,
 body {
 	margin: 0 !important;
 	padding:0; 
-	font-family: 'sofia-pro', 'sans-serif';
+	font-family: $base_font;
   font-size: $base-font-size;
-  font-weight: 400;
-  color: $text;
+  font-weight: 300;
+  color: clr('neutral-light',100);
   background: white;
   // @media (max-width: 1500px) {
   //   font-size: calc(#{$base-font-size} - .25vw);
@@ -15,6 +17,7 @@ body {
   //   font-size: calc(#{$base-font-size} - .5vw);
   // }
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body.screen-tint:after {
@@ -44,7 +47,7 @@ body.screen-tint:after {
     padding: .5em;
     left: -1000em;
     top: 0;
-    background-color: $primary;
+    background-color: clr('primary');
     z-index: 99999;
     color: black;
     @include transition(all,250ms);

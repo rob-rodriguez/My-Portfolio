@@ -1,3 +1,5 @@
+@use '../abstracts/breakpoints.scss' as *;
+
 $width: 100%;
 $gutter: 0;
 $breakpoint-small: map-get($breakpoints, "sm");

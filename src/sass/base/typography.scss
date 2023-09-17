@@ -1,10 +1,11 @@
+@use '../abstracts' as *;
+
 h1, h2, h3,
 h4, h5, h6 {
 	line-height: 1.3em;
-	font-weight: 500;
+	font-weight: 700;
 	font-style: normal;
 	margin-bottom: 1.25rem;
-	font-family: $heading_font;
 }
 
 h1 {
@@ -13,10 +14,8 @@ h1 {
 }
 
 h2 {
-	color: $primary;
-	font-weight: 700;
+	color: clr('primary');
 	font-size: $text-size-3xl;
-	@include letter-spacing(50);
 }
 
 h3 {
@@ -36,7 +35,7 @@ h6 {
 }
 
 p {
-	line-height: 1.5em;
+	line-height: 1.6em;
 	margin-bottom: 1.5rem;
 }
 
@@ -50,18 +49,6 @@ ol {
 	}
 	li {
 		line-height: 1.5em;
-	}
-}
-
-ul.titan-orange {
-	li::marker {
-		color: var(--titan-orange);
-	}
-}
-
-ul.medium-blue {
-	li::marker {
-		color: var(--medium-blue);
 	}
 }
 
@@ -92,24 +79,6 @@ ol.numbered {
 			list-style: circle;
 		}
 	}
-	&.medium-blue {
-		> li:before {
-			color: white;
-			background: var(--medium-blue);
-		}
-		li::marker {
-			color: var(--medium-blue);
-		}
-	}
-	&.titan-orange {
-		> li:before {
-			color: $text;
-			background: var(--titan-orange);
-		}
-		li::marker {
-			color: var(--titan-orange);
-		}
-	}
 }
 
 a {
@@ -121,7 +90,7 @@ a {
 	@include transition(all,250ms);
 	&:hover {
 		@include transition(all,250ms);
-		text-decoration-color: $primary;
+		text-decoration-color: clr('primary');
 	}
 }
 
@@ -217,7 +186,7 @@ hr {
 }
 
 :focus {
-	outline: 2px solid $primary;
+	outline: 2px solid clr('primary');
 	outline-offset: 2px;
 }
 

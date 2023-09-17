@@ -1,68 +1,178 @@
-@use '../styles/variables-mixins.scss' as var;
+@use '../sass/abstracts' as *;
 
 .hero {
-  height: 80vh;
   min-height: 600px;
-  @include var.vertical-gradient(#3C434B,#1C1D1F);
+  @include vertical-gradient( clr('neutral-dark',400) , clr('neutral-dark',800) );
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  clip-path: ellipse(100% 70% at 50% 30%);
+  clip-path: ellipse(200% 70% at 50% 30%);
   position: relative;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
+  overflow: hidden;
 
-  .heroTextContainer {
-    width: var.$wrap_width;
+  @include breakpoint('lg') {
+    clip-path: ellipse(100% 70% at 50% 30%);
+    height: 85vh;
+  }
+
+  .heroContainer {
+    max-width: $wrap_width;
+    width: 85%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 6rem 0;
 
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%,-50%);
-  }
-
-  .headshotThumbnail {
-    margin-right: 30px;
-  }
-
-  .heroTextTitle,
-  .heroTextIntro {
-    margin: 0;
-    line-height: 1em;
-  }
-
-  .heroTextTitle {
-    font-size: var.$text-size-lg;
-  }
-
-  .heroTextIntro {
-    font-size: var.$text-size-6xl;
-    font-weight: 700;
-    @include var.letter-spacing(-20);
-    margin-bottom: 3rem;
-
-    span {
-      color: var.$primary;
+    @include breakpoint('lg') {
+      flex-direction: row;
+      align-items: start;
+      justify-content: left;
+      padding: 0;
     }
+    
+    .headshotThumbnail {
+      max-width: 185px;
+      flex-shrink: 0;
+    }
+  
+    .heroTextContainer {
+      margin-top: 2rem;
 
+      .heroTextTitle,
+      .heroTextIntro {
+        margin: 0;
+        line-height: 1em;
+        text-align: center;
+
+        @include breakpoint('lg') {
+          text-align: left;
+        }
+
+      }
+
+      .uniqueText {
+        vertical-align: middle;
+        width: 3em;
+      }
+
+      .unique {
+        background: linear-gradient(to right, clr('primary', 600), #F8DAA3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "highest-praise", sans-serif;
+        @include letter-spacing(10);
+        font-size: 1.25em;
+        position: relative;
+        top: 0.05em;
+        font-weight: 400;
+      }
+    
+      .heroTextTitle {
+        font-size: $text-size-lg;
+        font-size: clamp(1rem, 2vw, $text-size-lg);
+        margin-bottom: .75rem;
+        line-height: 1.25em;
+      }
+    
+      .heroTextIntro {
+        // font-size: $text-size-6xl;
+        font-size: clamp(1.9rem, 4vw, $text-size-6xl);
+        font-weight: 700;
+        @include letter-spacing(10);
+        margin-bottom: 3rem;
+    
+        span {
+          color: clr('primary');
+        }
+    
+      }
+
+      .heroCTAContainer {
+        text-align: center;
+
+        @include breakpoint('lg') {
+          text-align: left;
+        }
+      }
+
+    }
+  
   }
 
   .downButton {
-    border: 1px solid white;
-    color: white;
+    border: 1px solid clr('neutral-light',100);
+    color: clr('neutral-light',100);
     background: none;
     text-align: center;
-    width: 2.5em;
-    height: 2.5em;
+    width: 1.85rem;
+    height: 1.85rem;
     padding: .25rem;
     border-radius: 50%;
     position: absolute;
-    bottom: 40px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
   }
 
+  .backgroundLogo {
+    position: absolute;
+    z-index: -1;
+    width: 150%;
+    max-width: 650px;
+    aspect-ratio: 1;
+    opacity: .05;
+    top: -3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include breakpoint('lg') {
+      height: 100vh;
+      width: auto;
+      max-width: unset;
+      opacity: .14;
+      right: -4rem;
+      left: unset;
+      top: 0;
+      transform: unset;
+    }
+
+    .backgroundLogoPath {
+      fill: clr('neutral-dark', 300);
+
+      @include breakpoint('lg') {
+        fill: clr('neutral-dark', 400);
+      }
+    }
+
+  }
+
+}
+
+.services {
+  padding: 5rem 0;
+  background: clr('neutral-dark',600);
+  // clip-path: ellipse(100% 70% at 50% 100%);
+  .service {
+    display: flex;
+    justify-content: center;
+    padding: 1.7rem;
+
+    .serviceIcon {
+      flex-basis: 20%;
+      flex-grow: 0;
+      padding-right: 5%;
+      img {
+        height: 100px;
+      }
+    }
+
+    .serviceDetail {
+      flex-shrink: 0;
+      flex-basis: 80%;
+    }
+
+  }
 }
