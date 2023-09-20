@@ -53,22 +53,22 @@
 
       }
 
-      .uniqueText {
-        vertical-align: middle;
-        width: 3em;
-      }
+      // .uniqueText {
+      //   vertical-align: middle;
+      //   width: 3em;
+      // }
 
-      .unique {
-        background: linear-gradient(to right, clr('primary', 600), #F8DAA3);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-family: "highest-praise", sans-serif;
-        @include letter-spacing(10);
-        font-size: 1.25em;
-        position: relative;
-        top: 0.05em;
-        font-weight: 400;
-      }
+      // .unique {
+      //   background: linear-gradient(to right, clr('primary', 600), #F8DAA3);
+      //   -webkit-background-clip: text;
+      //   -webkit-text-fill-color: transparent;
+      //   font-family: "highest-praise", sans-serif;
+      //   @include letter-spacing(10);
+      //   font-size: 1.25em;
+      //   position: relative;
+      //   top: 0.05em;
+      //   font-weight: 400;
+      // }
     
       .heroTextTitle {
         font-size: $text-size-lg;
@@ -147,6 +147,38 @@
       }
     }
 
+  }
+
+}
+
+.recentProjects {
+  padding: 7rem 0;
+
+  .project {
+    padding: 4rem 0;
+    position: relative;
+    min-height: 640px;
+
+    &:after {
+      content: '';
+      width: 100%;
+      display: table;
+      clear: both;
+    }
+
+    .projectText {
+      float: right;
+      max-width: 31rem;
+      margin-top: 2rem;
+    }
+
+    .projectImage {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 70%;
+    }
+    
   }
 
 }

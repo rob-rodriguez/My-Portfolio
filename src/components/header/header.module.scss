@@ -71,10 +71,7 @@
     }
 
     .siteLogoPath {
-      stroke-width: 0;
       fill: clr('primary');
-      @include transition(all,200ms);
-      transition-delay: 450ms;
     }
 
     &:global(.fill-white) {
