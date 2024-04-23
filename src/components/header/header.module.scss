@@ -7,23 +7,15 @@
   padding: 10px;
   position: fixed;
   z-index: 100;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  border-top-left-radius: 12.5px;
-  border-top-right-radius: 12.5px;
+  top: 0;
+  left: 0;
+  right: 0;
+  // border-top-left-radius: 12.5px;
+  // border-top-right-radius: 12.5px;
   // overflow: hidden;
 
   @include breakpoint('md') {
     padding: 20px;
-  }
-
-  @include breakpoint('lg') {
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
   }
 
   @include transition(all,300ms);
@@ -37,13 +29,13 @@
     z-index: -1;
     opacity: 0;
     @include transition(all,300ms);@include vertical-gradient(rgba(0,0,0,.9), rgba(0,0,0,0));
-    border-top-left-radius: 12.5px;
-    border-top-right-radius: 12.5px;
+    // border-top-left-radius: 12.5px;
+    // border-top-right-radius: 12.5px;
     // transition-delay: 500ms;
 
     @include breakpoint('lg') {
-      border-top-left-radius: 25px;
-      border-top-right-radius: 25px;
+      // border-top-left-radius: 25px;
+      // border-top-right-radius: 25px;
     }
 
   }

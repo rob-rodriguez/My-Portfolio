@@ -1,0 +1,28 @@
+@use '../../sass/abstracts' as *;
+
+.project {
+  padding: 4rem 0;
+  position: relative;
+  min-height: 640px;
+
+  &:after {
+    content: '';
+    width: 100%;
+    display: table;
+    clear: both;
+  }
+
+  .projectText {
+    float: right;
+    max-width: 31rem;
+    margin-top: 2rem;
+  }
+
+  .projectImage {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 67%;
+  }
+  
+}

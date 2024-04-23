@@ -3,12 +3,14 @@
 html,
 body {
 	margin: 0 !important;
-	padding:0; 
+	padding: 0;
+  // clip-path: inset( 1rem round 1rem );
 	font-family: $base_font;
   font-size: $base-font-size;
   font-weight: 300;
   color: clr('neutral-light',100);
-  background: white;
+  // background: white;
+  background-color: clr('neutral-dark');
   // @media (max-width: 1500px) {
   //   font-size: calc(#{$base-font-size} - .25vw);
   // }

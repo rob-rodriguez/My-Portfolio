@@ -154,32 +154,36 @@
 .recentProjects {
   padding: 7rem 0;
 
-  .project {
-    padding: 4rem 0;
-    position: relative;
-    min-height: 640px;
-
-    &:after {
-      content: '';
-      width: 100%;
-      display: table;
-      clear: both;
-    }
-
-    .projectText {
-      float: right;
-      max-width: 31rem;
-      margin-top: 2rem;
-    }
-
-    .projectImage {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 70%;
-    }
-    
+  .recentProjectsHeading {
+    margin-bottom: 3rem;
   }
+
+  // .project {
+  //   padding: 4rem 0;
+  //   position: relative;
+  //   min-height: 640px;
+
+  //   &:after {
+  //     content: '';
+  //     width: 100%;
+  //     display: table;
+  //     clear: both;
+  //   }
+
+  //   .projectText {
+  //     float: right;
+  //     max-width: 31rem;
+  //     margin-top: 2rem;
+  //   }
+
+  //   .projectImage {
+  //     position: absolute;
+  //     bottom: 0;
+  //     left: 0;
+  //     width: 67%;
+  //   }
+    
+  // }
 
 }
 
@@ -207,4 +211,14 @@
     }
 
   }
+}
+
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: clr('primary');
+  transform-origin: 0%;
 }

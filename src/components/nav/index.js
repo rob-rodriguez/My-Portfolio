@@ -36,7 +36,7 @@ const Nav = (props) => {
 
   const navList = {
     open: {
-      height: size.height - 30,
+      height: size.height,
       transition: { 
         delay: 0.3,
         duration: 0.2,
