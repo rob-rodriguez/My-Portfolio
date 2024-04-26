@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `My Portfolio`,
+    title: `Robert Rodriguez - Website Design and Development`,
     description: `default`,
     siteUrl: `https://www.yourdomain.tld`
   },
