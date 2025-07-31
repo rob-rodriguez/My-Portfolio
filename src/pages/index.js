@@ -299,7 +299,6 @@ const IndexPage = (props) => {
               <StaticImage src="../images/skill-logos/apache.png" alt="Apache" placeholder="blurred" layout="constrained" imgClassName={styles.skillLogoImage} width={75} height={75} />
               <StaticImage src="../images/skill-logos/css.png" alt="CSS" placeholder="blurred" layout="constrained" imgClassName={styles.skillLogoImage} width={75} height={75} />
               <StaticImage src="../images/skill-logos/html.png" alt="HTML" placeholder="blurred" layout="constrained" imgClassName={styles.skillLogoImage} width={75} height={75} />
-              <StaticImage src="../images/skill-logos/javascript.png" alt="Javascript" placeholder="blurred" layout="constrained" imgClassName={styles.skillLogoImage} width={75} height={75} />
               <StaticImage src="../images/skill-logos/git.png" alt="Git" placeholder="blurred" layout="constrained" imgClassName={styles.skillLogoImage} width={75} height={75} />
               <StaticImage src="../images/skill-logos/mjml.png" alt="MJML" placeholder="blurred" layout="constrained" imgClassName={styles.skillLogoImage} width={75} height={75} />
               <StaticImage src="../images/skill-logos/mysql.png" alt="MySQL" placeholder="blurred" layout="constrained" imgClassName={styles.skillLogoImage} width={75} height={75} />
@@ -443,7 +442,7 @@ const IndexPage = (props) => {
 
 export default IndexPage
 
-export const Head = ({location}) => <SEO title="Robert Rodriguez: Web designer & developer in Orange County" pathname={location.pathname}  />
+export const Head = ({location}) => <SEO title="Robert Rodriguez: Website Designer & Developer in Los Angeles" pathname={location.pathname}  />
 
 
 // function ProjectListing(props) {
