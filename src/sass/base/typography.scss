@@ -1,0 +1,275 @@
+@use '../abstracts' as *;
+
+h1, h2, h3,
+h4, h5, h6 {
+	line-height: 1.3em;
+	font-weight: 700;
+	font-style: normal;
+	margin-bottom: 1.25rem;
+}
+
+h1 {
+	font-size: $text-size-4xl;
+	// font-weight: 500;
+}
+
+h2 {
+	color: clr('primary');
+	font-size: $text-size-3xl;
+}
+
+h3 {
+	font-size: $text-size-xl;
+}
+
+h4 {
+	font-size: $text-size-lg;
+}
+
+h5 {
+	font-size: $text-size-md;
+}
+
+h6 {
+	font-size: $text-size-md;
+}
+
+p {
+	line-height: 1.6em;
+	margin-bottom: 1.5rem;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5rem 0;
+	padding-left: 2em;
+	ul,
+	ol {
+		margin: .25em 0;
+	}
+	li {
+		line-height: 1.5em;
+	}
+}
+
+ol.numbered {
+	counter-reset: orderedList;
+	> li {
+		list-style: none;
+		position: relative;
+		margin: .5em 0;
+		&:before {
+			position: absolute;
+			left: -1.75rem;
+			top: 0;
+			counter-increment: orderedList;
+			content: counter(orderedList);
+			display: inline-block;
+			background: var(--text);
+			color: var(--background);
+			border-radius: 50%;
+			width: 1.25rem;
+			height: 1.25rem;
+			text-align: center;
+			line-height: 1.4rem;
+			font-size: $text-size-sm;
+			font-weight: 600;
+		}
+		li {
+			list-style: circle;
+		}
+	}
+}
+
+a {
+	color: $text;
+	text-decoration-color: $text;
+	text-decoration-thickness: 1px;
+	text-decoration-style: solid;
+	text-underline-offset: 3px;
+	@include transition(all,250ms);
+	&:hover {
+		@include transition(all,250ms);
+		text-decoration-color: clr('primary');
+	}
+}
+
+blockquote {
+	width: 100%;
+	border-top: 3px solid var(--titan-orange);
+	border-bottom: 3px solid var(--titan-orange);
+	margin: 2rem 0;
+	padding: 2rem 0;
+	font-family: $heading_font;
+	font-weight: 400;
+	font-style: normal;
+	font-size: $text-size-md;
+	line-height: 1.5em;
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+	cite {
+		color: var(--text);
+		font-family: $body_font;
+		// font-weight: 300;
+		font-size: $text-size-sm;
+		font-style: normal;
+		margin-top: 15px;
+		display: block;
+		position: relative;
+		padding-left: 1em;
+		&:before {
+			content: '\2014';
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	&.pullquote {
+		border-color: var(--text);
+		border-top-width: 2px;
+		position: relative;
+		margin-top: 4rem;
+		padding-top: 4rem;
+		.pullquote-image {
+			background: var(--background);
+			border-radius: 50%;
+			border: 1px solid var(--text);
+			width: 100px;
+			aspect-ratio: 1;
+			object-fit: cover;
+			display: block;
+			margin: 0 auto;
+			top: -50px;
+			left: 50%;
+			transform: translateX(-50%);
+			position: absolute;
+		}
+	}
+}
+
+.info-block {
+	width: 100%;
+	border-top: 3px solid var(--text);
+	border-bottom: 3px solid var(--text);
+	margin: 4rem 0 2rem 0;
+	padding: 4rem 2rem 2rem 2rem;
+	position: relative;
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+	&:before {
+		content: '';
+		background-color: var(--background);
+		// background-image: url('./images/fyi-icon.svg');
+		background-size: 70%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: 70px;
+		aspect-ratio: 1;
+		display: block;
+		margin: 0 auto;
+		top: -40px;
+		left: 50%;
+		transform: translateX(-50%);
+		position: absolute;
+	}
+}
+
+hr {
+	border: none;
+	border-top: 2px dotted#ccc;
+	margin: 3.5rem 0;
+	@include darkmode() {
+    border-color: #4e555e;
+  }
+}
+
+:focus {
+	outline: 2px solid clr('primary');
+	outline-offset: 2px;
+}
+
+pre {
+	line-height: 1.5em;
+}
+
+code {
+	font-family: 'Fira Code', monospace;
+	background: #f1f1f1;
+	display: inline-block;
+	padding: .1em .35em;
+	font-size: .9em;
+	@include darkmode() {
+		background: #0a0d10;
+	}
+}
+
+.leadin {
+	font-size: $text-size-lg;
+	font-weight: 300;
+}
+
+small {
+	font-size: $text-size-sm;
+}
+
+.text-muted {
+	color: #757575;
+	@include darkmode() {
+		color: #8E8E8E;
+	}
+}
+
+strong {
+	font-weight: 600;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  caption {
+    font-family: $body_font;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  th,
+  td {
+    padding: 0.500em;
+    border: 1px solid #ccc;
+    line-height: 1.313em;
+    @include darkmode() {
+      border-color: #4e555e;
+    }
+  }
+  th {
+    background-color: #EBEDEE;
+    text-align: left;
+    font-weight: bold;
+    @include darkmode() {
+      background-color: #3c4148;
+    }
+  }
+  &.table-striped {
+    tr {
+      &:nth-child(odd) { 
+        background: #ECECEC;
+        @include darkmode() {
+          background: #272f3a;
+        }
+      }
+    }
+  }
+  &.table-minimal {
+    th,
+    td {
+      border: none;
+      border-bottom: 1px solid #ccc;
+      background: none;
+      @include darkmode() {
+        background: none;
+      }
+    }
+  }
+}

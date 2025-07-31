@@ -1,0 +1,76 @@
+@use '../abstracts' as *;
+
+.button {
+  display: inline-block;
+  color: $text;
+	font-family: $base_font;
+	font-size: 1rem;
+  padding: 0.5em 1em .6em 1.25em;
+  border: 1px solid #ccc;
+	font-weight: 600;
+	@include transition(all,200ms);
+	margin: .1rem 0;
+	line-height: 1em;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 1.66rem;
+  &:hover,
+  &:focus,
+  &:active {
+    // background-color:#000;
+    // color:#FFF;
+		@include transition(all,200ms);
+  }
+	svg {
+		vertical-align: bottom;
+		margin-left: .125em;
+	}
+
+	&.primary {
+		@include primary-gradient();
+		background-size: 300% 100%;
+		color: white;
+		border: 1px solid clr('primary');
+		font-weight: 600;
+		outline-offset: 2px;
+		&:hover,
+		&:focus {
+			outline: 3px solid white;
+			background-position: 100% 0;
+		}
+		&.outline {
+			background-color: transparent;
+			color: clr('primary');
+			border: 1px solid clr('primary');
+			&:hover,
+			&:focus {
+				// background-color: clr('primary');
+				color: clr('primary');
+			}
+		}
+	}
+
+	&.default {
+		background-color: $text;
+		color: $background;
+		border: 1px solid $text;
+		font-weight: 600;
+		outline-offset: 2px;
+		&:hover,
+		&:focus {
+			background-color: $text;
+			outline: 3px solid clr('primary');
+		}
+		&.outline {
+			background-color: transparent;
+			color: $text;
+			border: 1px solid $text;
+			&:hover,
+			&:focus {
+				// background-color: clr('primary');
+				color: $text;
+			}
+		}
+	}
+
+}

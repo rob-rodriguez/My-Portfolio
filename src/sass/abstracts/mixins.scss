@@ -1,0 +1,35 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin box-shadow($posx, $posy, $blur, $color) {
+	-webkit-box-shadow: $posx $posy $blur $color;
+	-moz-box-shadow: $posx $posy $blur $color;
+	-ms-box-shadow: $posx $posy $blur  $color;
+	-o-box-shadow: $posx $posy $blur  $color;
+	box-shadow: $posx $posy $blur $color;
+}
+
+@mixin transition($prop, $time) {
+	-webkit-transition: #{$prop} #{$time};
+	-moz-box-shadow: #{$prop} #{$time};
+	-ms-box-shadow: #{$prop} #{$time};
+	-o-transition: #{$prop} #{$time};
+	transition: #{$prop} #{$time};
+}
+
+@mixin darkmode() {
+
+	// Prints a media query based on the value
+	html[data-theme='dark'] & {
+		@content;
+	}
+}
+
+@mixin letter-spacing($spacing) {
+  letter-spacing: calc($spacing / 1000) * 1em;
+}

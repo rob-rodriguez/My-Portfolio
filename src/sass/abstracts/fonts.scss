@@ -1,0 +1,29 @@
+@import url("https://use.typekit.net/jpx5hza.css");
+
+$base_font: 'sofia-pro', 'sans-serif';
+$serif_font:  $base_font;
+$sans_serif_font: $base_font;
+$body_font: $base_font;
+$heading_font: $base_font;
+$display_font: $base_font;
+
+//text size
+$base-font-size: 18px;
+$text-size-xs: 0.69rem; // 12.5px
+$text-size-sm: 0.83rem; // 15px
+$text-size-md: 1rem; // 18px
+$text-size-lg: 1.2rem; // 21.6px
+$text-size-xl: 1.44rem; // 25.92px
+$text-size-2xl: 1.73rem; // 31.104px
+$text-size-3xl: 2.07rem; // 37.325px
+$text-size-4xl: 2.49rem; // 44.79px
+$text-size-5xl: 2.99rem; // 53px
+$text-size-6xl: 3.55rem; // 63.9
+
+// $text-size-6xl: clamp(2rem, 0.6324rem + 6.8382vw, 1.2em);
+// $text-size-6xl: clamp(2rem, 0.6324rem + 6.8382vw, 1.44rem);
+// $text-size-6xl: clamp(2rem, 0.6324rem + 6.8382vw, 1.73rem);
+// $text-size-6xl: clamp(2rem, 0.6324rem + 6.8382vw, 2.07rem);
+// $text-size-6xl: clamp(2rem, 0.6324rem + 6.8382vw, 2.49rem);
+// $text-size-6xl: clamp(2rem, 0.6324rem + 6.8382vw, 2.99rem);
+// $text-size-6xl: clamp(2rem, 0.6324rem + 6.8382vw, 3rem);

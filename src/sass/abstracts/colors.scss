@@ -1,0 +1,141 @@
+//Color Scheme
+$background: #222427;
+$text: #e2e2e2;
+$primary: #EF5353;
+$primary-medium: #CF4646;
+$primary-dark: #782A2A;
+$secondary: #FED45E;
+
+$colors: (
+  primary: (
+    100: #FD9D97,
+    200: #FA8C86,
+    300: #F77A75,
+    400: #F36864,
+    500: #EF5353,
+    600: #D04747,
+    700: #943030,
+    800: #B13B3B,
+    900: #782525
+  ),
+  neutral-light: (
+    100: #E8E8E8,
+    200: #E4E4E4,
+    300: #E1E1E1,
+    400: #DDDDDD,
+    500: #D9D9D9,
+    600: #BCBCBC,
+    700: #A1A1A1,
+    800: #868686,
+    900: #6C6C6C
+  ),
+  neutral-dark: (
+    100: #727375,
+    200: #5C5E61,
+    300: #484A4C,
+    400: #343639,
+    500: #222427,
+    600: #1C1E20,
+    700: #16181A,
+    800: #111214,
+    900: #0B0C0E
+  ),
+  error: (
+    100: #F8958C,
+    200: #F58279,
+    300: #F06E67,
+    400: #EC5954,
+    500: #E64040,
+    600: #C83636,
+    700: #AB2D2D,
+    800: #8E2424,
+    900: #731B1B
+  ),
+  warning: (
+    100: #F7E6AF,
+    200: #F6E1A0,
+    300: #F5DD92,
+    400: #F3D982,
+    500: #F2D472,
+    600: #D2B862,
+    700: #B49D53,
+    800: #968344,
+    900: #796936
+  ),
+  success: (
+    100: #A5E4B9,
+    200: #95E0AD,
+    300: #84DBA1,
+    400: #72D696,
+    500: #5ED18A,
+    600: #51B577,
+    700: #449B65,
+    800: #378153,
+    900: #2B6842
+  ),
+  information: (
+    100: #97B2EB,
+    200: #87A5E7,
+    300: #7798E2,
+    400: #678BDE,
+    500: #577ED9,
+    600: #4B6DBC,
+    700: #3E5CA1,
+    800: #334C86,
+    900: #273C6C
+  )
+);
+
+//does not work with colors containing alpha
+@function encodecolor($string) {
+	@if type-of($string) == 'color' {
+        $hex: str-slice(ie-hex-str($string), 4);
+        $string:unquote("#{$hex}");
+    }
+    $string: '%23' + $string;
+	@return $string;
+}
+
+@function clr($base, $shade: 500) {
+  $color: map-get(map-get($colors, $base), $shade);
+  @return $color;
+}
+
+@mixin horizontal-gradient($color1, $color2) {
+	background: $color1;
+	background: -moz-linear-gradient(left,  $color1 0%, $color2 100%);
+	background: -webkit-linear-gradient(left,  $color1 0%,$color2 100%);
+	background: linear-gradient(to right,  $color1 0%,$color2 100%);
+}
+
+@mixin vertical-gradient($color1, $color2) {
+	background: $color1;
+	background: -moz-linear-gradient(top,  $color1 0%, $color2 100%);
+	background: -webkit-linear-gradient(top,  $color1 0%,$color2 100%);
+	background: linear-gradient(to bottom,  $color1 0%,$color2 100%);
+}
+
+@mixin primary-gradient() {
+  background: clr('primary', 600);
+  background: -moz-linear-gradient(
+    90deg,
+    clr('primary', 600) 0%,
+    clr('primary') 30%,
+    clr('primary', 600) 65%,
+    clr('primary') 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    clr('primary', 600) 0%,
+    clr('primary') 30%,
+    clr('primary', 600) 65%,
+    clr('primary') 100%
+  );
+  background: linear-gradient(
+    90deg,
+    clr('primary', 600) 0%,
+    clr('primary') 30%,
+    clr('primary', 600) 65%,
+    clr('primary') 100%
+  );
+}
