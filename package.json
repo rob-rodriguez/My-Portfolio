@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@uidotdev/usehooks": "^2.2.0",
-    "framer-motion": "^10.16.4",
     "gatsby": "^5.12.3",
     "gatsby-plugin-google-gtag": "^5.12.0",
     "gatsby-plugin-image": "^3.12.0",
@@ -24,10 +23,12 @@
     "gatsby-plugin-sharp": "^5.12.0",
     "gatsby-source-filesystem": "^5.12.0",
     "gatsby-transformer-sharp": "^5.13.1",
+    "motion": "^12.23.12",
     "react": "^18.2.0",
     "react-custom-scrollbars-2": "^4.5.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
+    "react-modal": "^3.16.3",
     "sass": "^1.66.1"
   }
 }

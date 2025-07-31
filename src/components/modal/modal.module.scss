@@ -1,0 +1,52 @@
+@use '../../sass/abstracts' as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.85);
+  z-index: 1201;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: none;
+  &:focus {
+    outline: none;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .25em;
+  }
+
+}
+
+// Modal fade in
+:global(.ReactModal__Overlay) {
+  opacity: 0;
+  @include transition('opacity','400ms ease-in-out');
+}
+
+:global(.ReactModal__Overlay--after-open) {
+  opacity: 1;
+  @include transition('opacity','400ms ease-in-out');
+}
+
+:global(.ReactModal__Overlay--before-close) {
+  opacity: 0;
+  @include transition('opacity','400ms ease-in-out');
+}

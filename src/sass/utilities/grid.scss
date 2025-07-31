@@ -11,10 +11,14 @@ $breakpoint-large: map-get($breakpoints, "lg");
 	max-width: $wrap_width;
 	margin-left:auto;
   margin-right:auto;
+  &-large,
   &.large {
+    @extend .container;
     max-width: $large_wrap_width;
   }
+  &-small,
   &.small {
+    @extend .container;
     max-width: $small_wrap_width;
   }
 }

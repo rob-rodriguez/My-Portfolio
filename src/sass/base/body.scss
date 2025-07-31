@@ -41,6 +41,10 @@ body.screen-tint:after {
   }
 }
 
+body.modaal-noscroll {
+	overflow: hidden;
+}
+
 #skip-nav {
   a {
     position: absolute;

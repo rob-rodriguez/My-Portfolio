@@ -1,0 +1,42 @@
+[
+  {
+    "title": "ECS Innovation Hub",
+    "summary": "A digital launchpad for Cal State Fullerton’s new Innovation Hub, designed to inform the community and attract partners ahead of the center’s grand opening.",
+    "description": "The ECS Innovation Hub site was developed to support the launch of a new, interdisciplinary innovation space at Cal State Fullerton. The site introduces the hub's mission, highlights core areas of innovation, and encourages engagement from industry partners and academic collaborators. Designed to be scalable as the hub grows, the site currently serves as an informational resource and outreach platform..",
+    "technologies": ["GatsbyJS", "React", "SCSS Modules", "PHP"],
+    "image": "ecs-hub.png",
+    "link": "https://www.fullerton.edu/innovation-hub/"
+  },
+  {
+    "title": "Titan Magazine",
+    "summary": "The official digital magazine of Cal State Fullerton, built to tell the stories of students, faculty, and alumni through an award-winning web experience.",
+    "description": "Titan Magazine transitioned to a digital-first format during the COVID-19 pandemic, requiring a completely new design. I led development of the new site from the ground up, working closely with Cal State Fullerton’s Strategic Communications team. The result is a fast, accessible, and visually rich platform that hosts immersive feature stories, photo essays, and alumni profiles. The site has won multiple CASE awards and continues to serve as the digital home for the university's flagship publication.",
+    "technologies": ["GatsbyJS", "React", "SCSS", "PHP"],
+    "image": "titan-mag.png",
+    "link": "https://titanmag.fullerton.edu/"
+  },
+  {
+    "title": "Matt Gush Photographics",
+    "summary": "A clean and immersive portfolio site for National Geographic–published photographer Matt Gush, built to showcase his global photojournalism work.",
+    "description": "Matt Gush is an accomplished photojournalist known for his powerful documentary work. I designed and built his website as a professional portfolio that elevates his photography while maintaining clean navigation and performance. Visitors can explore his work from regions around the world, learn about his process, and easily get in touch. The site places storytelling and visual impact at the center of the user experience.",
+    "technologies": ["WordPress", "SCSS", "PHP"],
+    "image": "matt-gush.png",
+    "link": "https://mattgush.com/"
+  },
+  {
+    "title": "It Takes a Titan Campaign",
+    "summary": "A compelling fundraising microsite built for Cal State Fullerton’s first ever giving campaign — showcasing outcomes, priorities, and personal stories.",
+    "description": "This site was created for Cal State Fullerton’s first comprehensive fundraising initiative, the It Takes a Titan campaign. I led the development of a dynamic site that communicates the campaign’s purpose, impact areas, and success stories through a highly visual, story-driven layout. The platform supports donation calls-to-action and allows visitors to explore campaign priorities in detail. The project earned a CASE Best of District award in the microsites category.",
+    "technologies": ["GatsbyJS", "React", "SCSS", "PHP"],
+    "image": "campaign.png",
+    "link": "https://campaign.fullerton.edu/"
+  },
+  {
+    "title": "Kim Nguyen-Penaloza for Congress",
+    "summary": "A campaign site for congressional candidate Kim Nguyen-Penaloza, built to elevate her platform, mobilize supporters, and drive voter engagement.",
+    "description": "I built this site for Kim Nguyen-Penaloza’s congressional run in California’s 45th district. Working in partnership with ARDA Campaigns, we developed a clear, accessible platform to promote her candidacy, highlight key issues, and support campaign actions like donations, endorsements, and voter outreach. The site was crafted to load quickly, work across devices, and reflect the energy and clarity of her campaign messaging.",
+    "technologies": ["GatsbyJS", "React", "Tailwind CSS", "JSON", "PHP"],
+    "image": "kim-nguyen.png",
+    "link": "https://www.votekimnguyen.com/"
+  }
+]

@@ -29,8 +29,11 @@ const IndexPage = (props) => {
   return (
     // <Scrollbars id="site-wrapper" className={styles.siteWrapper} onScrollFrame={handleScroll}>
       <>
+        <div id="skip-nav">
+          <a href="#main-content">Skip to Content (Press Enter)</a>
+        </div>
         <Header headerClass={headerClass} />
-        <main className={styles.mainContent}>
+        <main className={styles.mainContent} id='main-content'>
           {props.children}
         </main>
       </>

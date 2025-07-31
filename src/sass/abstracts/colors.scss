@@ -86,6 +86,15 @@ $colors: (
   )
 );
 
+//does not work with colors containing alpha
+@function encodecolor($string) {
+	@if type-of($string) == 'color' {
+        $hex: str-slice(ie-hex-str($string), 4);
+        $string:unquote("#{$hex}");
+    }
+    $string: '%23' + $string;
+	@return $string;
+}
 
 @function clr($base, $shade: 500) {
   $color: map-get(map-get($colors, $base), $shade);

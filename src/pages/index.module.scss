@@ -154,8 +154,8 @@
 .recentProjects {
   padding: 7rem 0;
 
-  .recentProjectsHeading {
-    margin-bottom: 3rem;
+  h2 {
+    margin-bottom: 8rem;
   }
 
   // .project {
@@ -188,9 +188,31 @@
 }
 
 .services {
-  padding: 5rem 0;
-  background: clr('neutral-dark',600);
-  // clip-path: ellipse(100% 70% at 50% 100%);
+  padding: 3rem 0;
+  background: clr('neutral-dark', 600);
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3rem;
+    background: clr('neutral-dark', 600);
+    clip-path: ellipse(60% 100% at 50% 100%);
+    position: absolute;
+    top: -3rem;
+    left: 0;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3rem;
+    background: clr('neutral-dark', 600);
+    clip-path: ellipse(60% 100% at 50% 0%);
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+  }
   .service {
     display: flex;
     justify-content: center;
@@ -213,12 +235,239 @@
   }
 }
 
-.progressBar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 10px;
-  background: clr('primary');
-  transform-origin: 0%;
+.about {
+  padding: 9rem 0;
+  @include vertical-gradient( clr('neutral-dark',400) , clr('neutral-dark',800) );
+
+
+  .aboutImage {
+    border-radius: 1.66rem;
+    margin: 0 0 1.5rem 0;
+    @include breakpoint('md') {
+      float: left;
+      margin: 0 1.5rem .5rem -5rem;
+    }
+  }
 }
+
+.skills {
+  padding: 3rem 0;
+  background: clr('neutral-dark', 600);
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3rem;
+    background: clr('neutral-dark', 600);
+    clip-path: ellipse(60% 100% at 50% 100%);
+    position: absolute;
+    top: -3rem;
+    left: 0;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3rem;
+    background: clr('neutral-dark', 600);
+    clip-path: ellipse(60% 100% at 50% 0%);
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+  }
+
+  h2 {
+    margin-bottom: 4rem;
+  }
+
+  :global(.row) {
+    align-items: center;
+  }
+
+  .skillLogos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-content: flex-start;
+    justify-content: center;
+    margin: 0;
+
+    :global(.gatsby-image-wrapper) {
+      flex-grow: 0;
+      width: 75px;
+      height: 75px;
+
+      &:nth-child(odd) {
+        margin-top: -.75rem;
+        margin-left: -.75rem;
+      }
+
+      &:nth-child(even) {
+        margin-bottom: -.75rem;
+        margin-right: -.75rem;
+      }
+    }
+
+    .skillLogoImage {
+      // filter: grayscale(100%);
+    }
+    
+  }
+
+  .skillList {
+    padding-top: 5rem;
+
+    @include breakpoint('md') {
+      padding-top: unset;
+      padding-left: 2rem;
+    }
+
+    strong {
+      color: clr('primary');
+    }
+
+    ul {
+      list-style: none;
+      li {
+        margin-bottom: 1rem;
+        position: relative;
+        &:before {
+          content: '';
+          width: 1em;
+          height: 1em;
+          position: absolute;
+          left: -1.25rem;
+          top: .35em;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='feather feather-chevron-right'%3E%3Cpath d='m9 18 6-6-6-6' style='stroke:#{ encodecolor( clr('primary') ) }'/%3E%3C/svg%3E");
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+}
+
+.experience {
+  padding: 9rem 0;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .experienceList {
+    list-style: none;
+    padding: 0;
+    // margin: 0;
+
+    > li {
+      padding-bottom: 2rem;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: -1.5rem;
+        top: .5rem;
+        width: .75rem;
+        height: .75rem;
+        border-radius: 50%;
+        background-color: clr('primary');
+        z-index: 2;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        left: -1.125rem;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: clr('neutral-light', 900);
+        z-index: 1;
+      }
+      &:first-child {
+        &:after {
+          top: .5rem
+        }
+      }
+      &:last-child {
+        &:after {
+          height: .75rem;
+        }
+      }
+
+      p {
+        margin-bottom: .75rem;
+      }
+
+      .title,
+      .details {
+        display: block;
+        margin-bottom: .25rem;
+        line-height: 1.25em;
+      }
+
+      .title {
+        font-weight: 600;
+        font-size: $text-size-lg;
+      }
+
+      .details {
+        font-size: $text-size-sm;
+      }
+
+      ul {
+        list-style: none;
+        li {
+          margin-bottom: .5rem;
+          position: relative;
+          &:before {
+            content: '';
+            width: 1em;
+            height: 1em;
+            position: absolute;
+            left: -1.25rem;
+            top: .35em;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='feather feather-chevron-right'%3E%3Cpath d='m9 18 6-6-6-6' style='stroke:#{ encodecolor( clr('primary') ) }'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.contact {
+  padding: 5em 0;
+  background: clr('neutral-dark', 600);
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3rem;
+    background: clr('neutral-dark', 600);
+    clip-path: ellipse(60% 100% at 50% 100%);
+    position: absolute;
+    top: -3rem;
+    left: 0;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+// .progressBar {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   height: 10px;
+//   background: clr('primary');
+//   transform-origin: 0%;
+// }

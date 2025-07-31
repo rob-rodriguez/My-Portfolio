@@ -1,24 +1,29 @@
 import * as React from "react"
 import * as styles from './nav.module.scss';
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 import { ChevronRight } from 'react-feather';
 import { MenuButton } from "./menu-button";
 import { useMediaQuery, useWindowSize } from "@uidotdev/usehooks";
 
 const links = [
   {
-    text: "About",
-    url: "#",
-    class: null
-  },
-  {
     text: "Projects",
-    url: "#",
+    url: "#projects",
     class: null
   },
   {
     text: "Services",
-    url: "#",
+    url: "#services",
+    class: null
+  },
+  {
+    text: "About",
+    url: "#about",
+    class: null
+  },
+    {
+    text: "Skills",
+    url: "#skills",
     class: null
   },
   // {
@@ -120,7 +125,7 @@ const Nav = (props) => {
                 ease: 'easeInOut',
                 duration: 0.1,
               }}
-              href="#"
+              href="#contact"
               className="button primary"
             >
               Contact <ChevronRight size={18} />
@@ -149,7 +154,7 @@ const Nav = (props) => {
               ease: 'easeInOut',
               duration: 0.1,
             }}
-            href="#"
+            href="#contact"
             className="button primary"
           >
             Contact <ChevronRight size={18} />

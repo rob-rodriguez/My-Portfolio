@@ -2,27 +2,54 @@
 
 .project {
   padding: 4rem 0;
-  position: relative;
-  min-height: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-evenly;
+  padding: 6rem 2rem;
+  @include breakpoint('md') {
+    flex-direction: row;
+    padding: 4rem 0;
+  }
 
-  &:after {
-    content: '';
-    width: 100%;
-    display: table;
-    clear: both;
+  // &:nth-child(even) {
+  //   background-color: clr('neutral-dark', 600);
+  // }
+
+  &:nth-child(odd) {
+    @include breakpoint('md') {
+      flex-direction: row-reverse;
+    }
   }
 
   .projectText {
-    float: right;
-    max-width: 31rem;
-    margin-top: 2rem;
+    @include breakpoint('md') {
+      width: 45%;
+    }
   }
 
   .projectImage {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 67%;
+    text-align: center;
+    @include breakpoint('md') {
+      width: 45%;
+    }
   }
   
+}
+
+.technologies {
+  padding: 0;
+  margin: .5rem 0 1.5rem 0;
+  list-style: none;
+  display: flex;
+  gap: .15rem;
+  li {
+    display: inline-block;
+    padding: .25rem .5rem;
+    background-color: clr('neutral-dark', 700);
+    border-radius: 4px;
+    color: clr('neutral-light', 100);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
 }
