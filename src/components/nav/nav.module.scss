@@ -51,6 +51,17 @@
     align-items: center;
     gap: 2rem;
     padding: 0;
+    &.navListDesktop {
+      display: none;
+      @include breakpoint('md') {
+        display: flex;
+      }
+    }
+    &.navListMobile {
+      @include breakpoint('md') {
+        display: none;
+      }
+    }
 
     @include breakpoint('md') {
       // display: block;
