@@ -3,7 +3,7 @@ import * as styles from './nav.module.scss';
 import { motion } from "motion/react"
 import { ChevronRight } from 'react-feather';
 import { MenuButton } from "./menu-button";
-import { useMediaQuery, useWindowSize } from "@uidotdev/usehooks";
+// import { useMediaQuery, useWindowSize } from "@uidotdev/usehooks";
 
 const links = [
   {
@@ -35,13 +35,13 @@ const links = [
 
 const Nav = (props) => {
 
-  const isMobile = useMediaQuery("only screen and (max-width : 767px)");
-  const size = useWindowSize();
+  // const isMobile = useMediaQuery("only screen and (max-width : 767px)");
+  // const size = { width: 0, height: 0 };
   // const [isOpen, toggleOpen] = useCycle(false, true);
 
   const navList = {
     open: {
-      height: size.height,
+      height: '100vh',
       transition: { 
         delay: 0.3,
         duration: 0.2,
@@ -101,10 +101,9 @@ const Nav = (props) => {
         />
       </button>
 
-      {isMobile ? (
 
         <motion.ul
-          className={styles.navList}
+          className={`${styles.navList} ${styles.navListMobile}`}
           initial={false}
           animate={props.isOpen ? "open" : "closed"}
           variants={navList}
@@ -133,10 +132,9 @@ const Nav = (props) => {
           </motion.li>
         </motion.ul>
 
-      ) : (
 
         <ul
-        className={styles.navList}>
+        className={`${styles.navList} ${styles.navListDesktop}`}>
         {links.map( (link, key) => (
           <li key={key}>
             <a href={link.url} className={link.class != null ? ( link.class ) : null}>{link.text} {link.class != null ? ( <ChevronRight size={18} /> ) : null}</a>
@@ -162,7 +160,6 @@ const Nav = (props) => {
         </li>
       </ul>
 
-      )}
     </nav>
   )
 }
