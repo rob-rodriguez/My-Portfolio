@@ -52,7 +52,7 @@ const IndexPage = (props) => {
 
   return (
     <Layout>
-      <h1 className="sr-only">Robert Rodriguez: Web designer & developer in Orange County</h1>
+      <h1 className="sr-only">Robert Rodriguez: Web designer & developer in Los Angeles</h1>
       <section className={styles.hero}>
         <div className={styles.heroContainer}>
 
