@@ -321,7 +321,7 @@ const IndexPage = (props) => {
             <div className={`col-5 ${styles.skillList}`}>
               <ul>
                 <li><strong>Front-End Development:</strong> HTML, CSS, SASS, JavaScript, jQuery, React, Gatsby</li>
-                <li><strong>Back-End & Server:</strong> PHP, MySQL, Node.js , Apache, Windows (IIS) & Linux server administration</li>
+                <li><strong>Back-End & Server:</strong> PHP, MySQL, Node.js , Apache, Windows (IIS) & Linux server administration, DNS Management</li>
                 <li><strong>CMS:</strong> WordPress, Drupal</li>
                 <li><strong>Tools & Platforms:</strong> Git, VS Code, Adobe XD, Figma, Photoshop, Illustrator</li>
                 <li><strong>Other:</strong> Responsive Design, Web Accessibility, SEO/Analytics, Email Campaigns (design, coding (MJML), and deployment using platforms like Mailchimp)</li>
